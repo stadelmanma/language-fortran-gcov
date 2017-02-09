@@ -1,0 +1,16 @@
+'comment': 'Inherits rules from fixed form Fortran.'
+'name': 'Fortran - Fixed Form'
+'scopeName': 'source.fortran.fixed.gcov'
+'fileTypes': [
+  'f'
+  'F'
+  'f77'
+  'F77'
+  'for'
+  'FOR'
+  'fpp'
+  'FPP'
+]
+'patterns': [
+  {'include': 'source.fortran.fixed'}
+]
