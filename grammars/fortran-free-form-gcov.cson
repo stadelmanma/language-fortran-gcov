@@ -12,6 +12,6 @@
   'F08.gcov'
 ]
 'patterns': [
-  {'include': 'source.fortran.free'}
   {'include': 'source.gcov'}
+  {'include': 'source.fortran.free'}
 ]

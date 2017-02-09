@@ -12,6 +12,6 @@
   'FPP.gcov'
 ]
 'patterns': [
-  {'include': 'source.fortran.fixed'}
   {'include': 'source.gcov'}
+  {'include': 'source.fortran.fixed'}
 ]

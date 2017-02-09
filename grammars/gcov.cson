@@ -8,21 +8,14 @@
   {
     match: '^((\\s*\\d+):(\\s*\\d+):.*)'
     captures: {
-      1: { name: 'meta.separator.hits'}
-      2: { name: 'markup.italic.line-number'}
-    }
-  }
-  {
-    match: '^((\\d+):(\\s*\\d+):.*)'
-    captures: {
-      1: { name: 'meta.separator.hits'}
+      1: { name: 'meta.line.gcov.hit-line'}
       2: { name: 'markup.italic.line-number'}
     }
   }
   {
     match: '^((\\s*#+):(\\s*\\d+):.*)'
     captures: {
-      1: { name: 'meta.line.error.logfile.missed-line'}
+      1: { name: 'meta.line.gcov.missed-line'}
       2: { name: 'markup.italic.line-number'}
     }
   }
