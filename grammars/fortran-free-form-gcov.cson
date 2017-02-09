@@ -13,4 +13,5 @@
 ]
 'patterns': [
   {'include': 'source.fortran.free'}
+  {'include': 'source.gcov'}
 ]

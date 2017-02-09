@@ -1,0 +1,36 @@
+'comment': 'Highlights a gcov file based on the data'
+'name': 'gcov'
+'scopeName': 'source.gcov'
+'fileTypes': [
+  'gcov'
+]
+'patterns': [
+  {
+    match: '^((\\s*\\d+):(\\s*\\d+):.*)'
+    captures: {
+      1: { name: 'meta.separator.hits'}
+      2: { name: 'markup.italic.line-number'}
+    }
+  }
+  {
+    match: '^((\\d+):(\\s*\\d+):.*)'
+    captures: {
+      1: { name: 'meta.separator.hits'}
+      2: { name: 'markup.italic.line-number'}
+    }
+  }
+  {
+    match: '^((\\s*#+):(\\s*\\d+):.*)'
+    captures: {
+      1: { name: 'meta.line.error.logfile.missed-line'}
+      2: { name: 'markup.italic.line-number'}
+    }
+  }
+  {
+    match: '^((\\s*-):(\\s*\\d+):.*)'
+    captures: {
+      1: { name: 'comment.double-dash.ignored-line'}
+      2: { name: 'markup.italic.line-number'}
+    }
+  }
+]
