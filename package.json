@@ -10,7 +10,7 @@
   },
   "keywords": [
     "grammar",
-    "fortran"
+    "fortran",
     "gcov"
   ]
 }
