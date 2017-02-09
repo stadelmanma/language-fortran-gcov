@@ -1,0 +1,16 @@
+{
+  "name": "language-fortran-gcov",
+  "version": "0.0.1",
+  "description": "Syntax highlighting for Fortran gcov files in atom ",
+  "repository": "https://github.com/stadelmanma/language-fortran-gcov",
+  "bugs": "https://github.com/stadelmanma/language-fortran-gcov/issues",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "keywords": [
+    "grammar",
+    "fortran"
+    "gcov"
+  ]
+}
