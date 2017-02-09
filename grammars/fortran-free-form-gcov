@@ -1,0 +1,15 @@
+'comment': 'Inherits rules from free form Fortran'
+'name': 'Fortran - Free Form'
+'scopeName': 'source.fortran.free.gcov'
+'fileTypes': [
+  'f90'
+  'F90'
+  'f95'
+  'F95'
+  'f03'
+  'F03'
+  'f08'
+  'F08'
+]
+'patterns': [
+  {'include': 'source.fortran.free'}
