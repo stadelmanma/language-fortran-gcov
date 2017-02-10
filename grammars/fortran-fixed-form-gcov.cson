@@ -1,7 +1,7 @@
-'comment': 'Inherits rules from fixed form Fortran.'
-'name': 'Gcov Fortran Fixed Form'
-'scopeName': 'source.fortran.fixed.gcov'
-'fileTypes': [
+comment: 'Inherits rules from fixed form Fortran.'
+name: 'gcov-Fortran Fixed Form'
+scopeName: 'source.fortran.fixed.gcov'
+fileTypes: [
   'f.gcov'
   'F.gcov'
   'f77.gcov'
@@ -11,7 +11,23 @@
   'fpp.gcov'
   'FPP.gcov'
 ]
-'patterns': [
-  {'include': 'source.gcov'}
-  {'include': 'source.fortran.fixed'}
+patterns: [
+  {include: '#comments'}
+  {include: 'source.gcov'}
+  {include: 'source.fortran.fixed'}
 ]
+repository: {
+  comments:
+    patterns:[
+      {
+        name: 'comment.line.fortran'
+        begin: '^ *-: *\\d+:[cC\\*]'
+        end: '\\n'
+      }
+      {
+        name: 'comment.line.fortran'
+        begin: '^ *!'
+        end: '\\n'
+      }
+    ]
+}

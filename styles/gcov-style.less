@@ -1,9 +1,25 @@
-.syntax--meta {
-  &.syntax--line.syntax--gcov.syntax--missed-line {
-    background-color: rgba(117, 16, 18, 0.3);
+.syntax--meta.syntax--line.syntax--gcov {
+  &.syntax--hit-line {
+      background-color: rgba(96, 166, 51, 0.3);
   }
 
-  &.syntax--line.syntax--gcov.syntax--hit-line {
-    background-color: rgba(96, 166, 51, 0.3);
+  &.syntax--missed-line {
+      background-color: rgba(117, 16, 18, 0.3);
+  }
+}
+
+.syntax--markup {
+  &.syntax--italic.syntax--gcov.syntax--line-number {
+    color: inherit;
+  }
+
+  &.syntax--bold.syntax--gcov {
+    &.syntax--hit-count {
+      color: rgba(96, 166, 51, 1);
+    }
+
+    &.syntax--missed-symbol {
+      color: rgba(117, 16, 18, 1);
+    }
   }
 }

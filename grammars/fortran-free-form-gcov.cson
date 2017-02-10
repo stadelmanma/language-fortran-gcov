@@ -1,7 +1,7 @@
-'comment': 'Inherits rules from free form Fortran'
-'name': 'Gcov Fortran Free Form'
-'scopeName': 'source.fortran.free.gcov'
-'fileTypes': [
+comment: 'Inherits rules from free form Fortran'
+name: 'gcov-Fortran Free Form'
+scopeName: 'source.fortran.free.gcov'
+fileTypes: [
   'f90.gcov'
   'F90.gcov'
   'f95.gcov'
@@ -11,7 +11,7 @@
   'f08.gcov'
   'F08.gcov'
 ]
-'patterns': [
-  {'include': 'source.gcov'}
-  {'include': 'source.fortran.free'}
+patterns: [
+  {include: 'source.gcov'}
+  {include: 'source.fortran.free'}
 ]
