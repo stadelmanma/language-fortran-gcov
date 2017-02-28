@@ -1,3 +1,6 @@
+## 0.1.1 - 2017/02/28
+* Fix typo in package.json
+
 ## 0.1.0 - 2017/02/28
 * Added support for C source gcov files.
 * Renamed repository from language-fortran-gcov to language-gcov
