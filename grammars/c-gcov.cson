@@ -1,0 +1,10 @@
+comment: 'Inherits rules from C'
+name: 'gcov-C'
+scopeName: 'source.c.gcov'
+fileTypes: [
+  'c.gcov'
+]
+patterns: [
+  {include: 'source.gcov'}
+  {include: 'source.c'}
+]
