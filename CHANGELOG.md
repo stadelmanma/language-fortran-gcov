@@ -1,3 +1,6 @@
+## 1.0.0 - 2017/02/28
+* Release version, updated README.md 
+
 ## 0.1.0 - 2017/02/28
 * Added support for C source gcov files.
 * Renamed repository from language-fortran-gcov to language-gcov
