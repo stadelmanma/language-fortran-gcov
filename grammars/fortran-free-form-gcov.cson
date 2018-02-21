@@ -17,6 +17,13 @@ patterns: [
   {include: 'source.fortran.free'}
 ]
 repository: {
+  # This pattern is customized so a couple of "end type" regexes aren't
+  # anchored to the start of a line. A much more general fix would be to
+  # find a way for the GCOV markup added to the front of the line to be
+  # "ignored" by all of the included patterns and skipped over as if it wasn't
+  # even there. I don't think this is possible using the CSON grammar syntax
+  # but may work using the new tree-sitter logic since I think I could just
+  # call it an "extra".
   'derived-type-definition':
     'name': 'meta.derived-type.definition.fortran'
     'begin': '(?i)\\b(type)\\b(?!\\s*(\\(|is\\b|\\=))'
@@ -38,11 +45,7 @@ repository: {
               '1': 'name': 'punctuation.comma.fortran'
             'end': '(?=::|[,;!\\n])'
             'patterns':[
-              {'include': '#access-attribute'}
-              {'include': '#abstract-attribute'}
-              {'include': '#language-binding-attribute'}
-              {'include': '#extends-attribute'}
-              {'include': '#invalid-word'}
+              {'include': '$self'}
             ]
           }
         ]
@@ -67,11 +70,7 @@ repository: {
             #'begin': '(?i)^(?!\\s*\\b(?:contains|end\\s*type)\\b)'
             #'end': '(?i)^(?=\\s*\\b(?:contains|end\\s*type)\\b)'
             'patterns':[
-              {'include': '#comments'}
-              {'include': '#derived-type-component-attribute-specification'}
-              {'include': '#derived-type-component-parameter-specification'}
-              {'include': '#derived-type-component-procedure-specification'}
-              {'include': '#derived-type-component-type-specification'}
+              {'include': '$self'}
             ]
           }
           {# contains section
@@ -82,11 +81,7 @@ repository: {
               '1': 'name': 'keyword.control.contains.fortran'
             'end': '(?i)(?=\\s*end\\s*type\\b)'
             'patterns':[
-              {'include': '#comments'}
-              {'include': '#derived-type-contains-attribute-specification'}
-              {'include': '#derived-type-contains-final-procedure-specification'}
-              {'include': '#derived-type-contains-generic-procedure-specification'}
-              {'include': '#derived-type-contains-procedure-specification'}
+              {'include': '$self'}
             ]
           }
         ]
